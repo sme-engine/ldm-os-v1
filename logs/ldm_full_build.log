@@ -1,0 +1,16 @@
+  CALL    scripts/checksyscalls.sh
+  CC      mm/ldm_lazy.o
+  CC      mm/ldm_iommu.o
+  CC      mm/ldm_cache.o
+mm/ldm_iommu.c: In function ‘ldm_detect_iommu’:
+mm/ldm_iommu.c:83:21: error: ‘platform_bus_type’ undeclared (first use in this function); did you mean ‘platform_notify’?
+  if (iommu_present(&platform_bus_type)) {
+                     ^~~~~~~~~~~~~~~~~
+                     platform_notify
+mm/ldm_iommu.c:83:21: note: each undeclared identifier is reported only once for each function it appears in
+make[3]: *** [scripts/Makefile.build:243: mm/ldm_iommu.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [scripts/Makefile.build:480: mm] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/src/linux-6.6.142/Makefile:1933: .] Error 2
+make: *** [Makefile:234: __sub-make] Error 2

@@ -1,0 +1,11 @@
+root:x:0:root
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:
+tty:x:5:
+disk:x:6:
+kmem:x:9:
+wheel:x:10:root
+nogroup:x:65534:
+nobody:x:65534:

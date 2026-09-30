@@ -1,0 +1,3 @@
+#!/bin/bash
+if [ $# -lt 2 ]; then exit 1; fi
+diff -q "$1" "$2" >/dev/null 2>&1

@@ -1,0 +1,13 @@
+test,elapsed_ms,throughput_mbps,ops,bytes
+residency_anchor_morph_cycle,2.776,5764.4,16000,13107200
+residency_inplace_modify,5.929,552.7,51200,3276800
+residency_lazy_io_batch,50.146,261.4,3200,13107200
+residency_cache_affinity,1.001,26194.8,6400,26214400
+residency_device_map_morph,1.223,5234.9,6400,13107200
+residency_full_lifecycle,10.137,646.5,1600,6553600
+residency_pressure_resilience,5.923,1106.5,1600,6553600
+residency_cross_domain_share,1.941,13505.5,1600,26214400
+ai_weight_tensor_residency,15.375,3410.1,12800,52428800
+ai_activation_forward_backward,0.982,1251.7,50,1228800
+db_buffer_pool_pin_update,0.298,16758.3,5000,20000
+net_zerocopy_packet_morph,19.176,3911.1,50000,75000000

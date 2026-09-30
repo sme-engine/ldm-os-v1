@@ -1,0 +1,11 @@
+test,elapsed_ms,throughput_mbps,ops,bytes
+ai_dataloader_fork_shm,104.978,1997.7,50,209715200
+gradient_allreduce_sim,460.242,2916.2,20,1342177280
+db_pagecache_random_rw,0.379,54059.7,5000,20480000
+container_mem_isolation,40.706,41215.4,400,1677721600
+live_migration_checkpoint,21.435,7446.3,50,159612928
+net_packet_throughput,291.496,514.6,50000,150000000
+mem_fragmentation_stress,233.694,21.4,5000,0
+thp_collapse_expand_sim,104.115,8057.0,400,838860800
+security_mem_scrub,2.826,18555.0,50,52428800
+numa_aware_multitenant,1388.101,1208.6,200,1677721600

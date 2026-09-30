@@ -1,0 +1,10 @@
+  SYNC    include/config/auto.conf.cmd
+/bin/bash: cmp: command not found
+  UPD     include/config/kernel.release
+/bin/bash: cmp: command not found
+  UPD     include/generated/uapi/linux/version.h
+/public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/src/linux-6.6.142/Makefile:1102: *** read: include/config/kernel.release: No such file or directory.  Stop.
+make[1]: *** Waiting for unfinished jobs....
+/bin/bash: cmp: command not found
+  UPD     include/generated/compile.h
+make: *** [Makefile:234: __sub-make] Error 2

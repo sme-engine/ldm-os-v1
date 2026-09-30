@@ -1,0 +1,34 @@
+╔══════════════════════════════════════════════════════════╗
+║         LDM-OS Performance Benchmark Suite              ║
+╠══════════════════════════════════════════════════════════╣
+║  Mode:       Traditional OS (baseline)                 ║
+║  Buffer:     64                                        ║
+║  Iterations: 100                                       ║
+╚══════════════════════════════════════════════════════════╝
+
+--- Memory Copy Benchmarks ---
+  memcpy_sequential                      3.150 ms     21304.1 MB/s  (6710886400 bytes × 100 iters)
+  page_copy_4K                           2.987 ms     22465.4 MB/s  (6710886400 bytes × 100 iters)
+  streaming_large_read                   3.033 ms     22127.9 MB/s  (6710886400 bytes × 100 iters)
+
+--- Allocation & Initialization ---
+  alloc_zero_init                        0.162 ms    413122.2 MB/s  (6710886400 bytes × 100 iters)
+
+--- Process & COW ---
+  fork_cow_overhead                      0.212 ms    316172.7 MB/s  (1342177280 bytes × 20 iters)
+
+--- I/O Benchmarks ---
+  file_write_throughput                 24.707 ms      2716.2 MB/s  (1342177280 bytes × 20 iters)
+  socket_loopback                        0.109 ms     19291.2 MB/s  (209715200 bytes × 100 iters)
+
+--- Scatter-Gather ---
+  scatter_gather_copy                    0.051 ms     20582.4 MB/s  (104857600 bytes × 100 iters)
+
+╔══════════════════════════════════════════════════════════╗
+║                    SUMMARY                              ║
+╠══════════════════════════════════════════════════════════╣
+║  Total data: 29.8 GB                                   ║
+║  Total time: 1.448 seconds                              ║
+║  Avg throughput: 20615.2 MB/s                             ║
+║  Mode: LDM-OFF                                    ║
+╚══════════════════════════════════════════════════════════╝

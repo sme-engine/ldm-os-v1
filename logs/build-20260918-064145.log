@@ -1,0 +1,14 @@
+  CALL    scripts/checksyscalls.sh
+  LINK linux
+[ENV] Alpine UML Workspace ready
+[ENV]   Kernel:  Linux 6.6.142 (UML arch)
+[ENV]   Alpine: v3.20
+[ENV]   Output: /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/output
+[ROOTFS] Building Alpine UML root filesystem
+[ROOTFS] Source busybox: /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/src/busybox-extract/bin/busybox.static
+[ROOTFS] Busybox installed with 305 symlinks
+[ROOTFS] Creating cpio archive...
+[ROOTFS] Output: /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/output/alpine-uml-rootfs.cpio.gz
+-rw-rw-r-- 1 scnz8d37kj scnz8d37kj 627K Sep 18 06:46 /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/output/alpine-uml-rootfs.cpio.gz
+[ROOTFS] Contents: 342 files/dirs
+[ROOTFS] === SUCCESS ===

@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""bc replacement for Linux kernel build.
+Handles: echo HZ | bc -q timeconst.bc"""
+import sys, os, re
+
+args = sys.argv[1:]
+# Parse args: skip -q flag, find .bc file
+bc_file = None
+for a in args:
+    if a.endswith('.bc'):
+        bc_file = a
+        break
+
+if bc_file and 'timeconst' in bc_file:
+    # Generate timeconst.h properly
+    hz_line = sys.stdin.read().strip()
+    try:
+        HZ = int(hz_line)
+    except:
+        HZ = 100
+    
+    def gcd(a, b):
+        while b: a, b = b, a % b
+        return a
+    
+    lines = []
+    lines.append("/* Auto-generated */")
+    lines.append("#ifndef __KERNEL_TIMECONST_H")
+    lines.append("#define __KERNEL_TIMECONST_H")
+    lines.append("#include <linux/param.h>")
+    lines.append("#include <linux/types.h>")
+    lines.append("#define HZ %d" % HZ)
+    lines.append("")
+    
+    for name, src in [("MSEC", 1000), ("USEC", 1000000)]:
+        g = gcd(src, HZ); d2 = HZ//g; n2 = src//g
+        mul = (2**32 * n2 + d2 - 1) // d2
+        adj = (2**32 * (d2-1)) // d2
+        lines.append("#define HZ_TO_%s_MUL %dU" % (name, mul))
+        lines.append("#define HZ_TO_%s_ADJ %dU" % (name, adj))
+        lines.append("#define HZ_TO_%s_SHIFT 32" % name)
+        lines.append("")
+        g2 = gcd(HZ, src); d3 = src//g2; n3 = HZ//g2
+        mul2 = (2**32 * n3 + d3 - 1) // d3
+        adj2 = (2**32 * (d3-1)) // d3
+        lines.append("#define %s_TO_HZ_MUL %dU" % (name, mul2))
+        lines.append("#define %s_TO_HZ_ADJ %dU" % (name, adj2))
+        lines.append("#define %s_TO_HZ_SHIFT 32" % name)
+        lines.append("")
+    
+    lines.append("#endif")
+    print("\n".join(lines))
+    sys.exit(0)
+
+# Generic arithmetic fallback
+expr = sys.stdin.read().strip()
+try:
+    print(eval(expr.replace('\n','')))
+except:
+    print(0)

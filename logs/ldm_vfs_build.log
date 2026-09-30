@@ -1,0 +1,22 @@
+  CALL    scripts/checksyscalls.sh
+  CC      mm/ldm_net.o
+  CC      mm/ldm_vfs.o
+mm/ldm_vfs.c: In function ‘ldm_iovec_hint’:
+mm/ldm_vfs.c:177:6: error: implicit declaration of function ‘iov_iter_is_ubuf’; did you mean ‘iov_iter_ubuf’? [-Werror=implicit-function-declaration]
+  if (iov_iter_is_ubuf(iter) && len >= 65536) {
+      ^~~~~~~~~~~~~~~~
+      iov_iter_ubuf
+mm/ldm_vfs.c: In function ‘ldm_dma_map_hint’:
+mm/ldm_vfs.c:253:6: error: called object ‘dma_map_direct’ is not a function or function pointer
+  if (dma_map_direct(dev, NULL)) {
+      ^~~~~~~~~~~~~~
+mm/ldm_vfs.c:52:12: note: declared here
+ static u64 dma_map_direct;  /* Direct mapping, no bounce buffer */
+            ^~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[3]: *** [scripts/Makefile.build:243: mm/ldm_vfs.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [scripts/Makefile.build:480: mm] Error 2
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [/public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/src/linux-6.6.142/Makefile:1933: .] Error 2
+make: *** [Makefile:234: __sub-make] Error 2

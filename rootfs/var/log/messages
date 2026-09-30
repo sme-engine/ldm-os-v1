@@ -1,0 +1,240 @@
+Sep 17 18:55:40 alpine-ldm-os syslog.info syslogd started: BusyBox v1.36.1
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: klogd started: BusyBox v1.36.1 (2025-11-23 14:32:18 UTC)
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Linux version 6.6.142 (scnz8d37kj@sandbox-2100506394332942338) (gcc (GCC) 8.4.1 20200928 (Red Hat 8.4.1-1), GNU ld version 2.30-93.el8) #5 Fri Sep 18 02:52:39 CST 2026
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Zone ranges:
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0]   Normal   [mem 0x0000000000000000-0x000000006870dfff]
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Movable zone start for each node
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Early memory node ranges
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0]   node   0: [mem 0x0000000000000000-0x000000000870dfff]
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Initmem setup node 0 [mem 0x0000000000000000-0x000000000870dfff]
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] random: crng init done
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.000000][    T0] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.000000][    T0] pcpu-alloc: [0] 0 
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Kernel command line: mem=128M rootfstype=hostfs rootflags=/public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/rootfs rw console=tty0 loglevel=4 init=/etc/init.d/rc.sysinit root=98:0
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Unknown kernel command line parameters "mem=128M", will be passed to user space.
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Dentry cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Inode-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Sorting __ex_table...
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Built 1 zonelists, mobility grouping on.  Total pages: 34101
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] mem auto-init: stack:off, heap alloc:off, heap free:off
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] stackdepot: allocating hash table via alloc_large_system_hash
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] stackdepot hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Memory: 114216K/138296K available (4504K kernel code, 2107K rwdata, 2076K rodata, 255K init, 5425K bss, 24080K reserved, 0K cma-reserved)
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **********************************************************
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** This system shows unhashed kernel memory addresses   **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** via the console, logs, and other interfaces. This    **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** might reduce the security of your system.            **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** If you see this message and you are not debugging    **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** the kernel, report this immediately to your system   **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** administrator!                                       **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **********************************************************
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] ODEBUG: selftest passed
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] NR_IRQS: 64
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_SUBCLASSES:  8
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCK_DEPTH:          48
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_KEYS:        8192
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... CLASSHASH_SIZE:          4096
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_ENTRIES:     32768
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_CHAINS:      65536
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... CHAINHASH_SIZE:          32768
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0]  memory used by lock dependency info: 3765 kB
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.000000][    T0]  per task-struct memory footprint: 1920 bytes
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] clocksource: timer: mask: 0xffffffffffffffff max_cycles: 0x1cd42e205, max_idle_ns: 881590404426 ns
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Calibrating delay loop... 4972.54 BogoMIPS (lpj=24862720)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Checking that host ptys support output SIGIO...Yes
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T0] pid_max: default: 32768 minimum: 301
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T0] LSM: initializing lsm=capability,integrity
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.090000][    T1] devtmpfs: initialized
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.100000][    T1] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.100000][    T1] futex hash table entries: 256 (order: 3, 22528 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] audit: initializing netlink subsys (disabled)
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.110000][   T13] audit: type=2000 audit(1789671340.398:1): state=initialized audit_enabled=0 res=1
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: Low Data Movement subsystem initializing
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: Principle: 'Data stays where it is; move references, not bytes.'
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM: debugfs interface at /sys/kernel/debug/ldm_os/
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: initialized successfully
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] pps_core: LinuxPPS API ver. 1 registered
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.110000][    T1] PTP clock support registered
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.120000][    T1] clocksource: Switched to clocksource timer
+Sep 17 18:55:40 alpine-ldm-os kern.notice kernel: [    0.120000][    T1] VFS: Disk quotas dquot_6.6.0
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.120000][    T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.120000][    T1] NET: Registered PF_INET protocol family
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.130000][    T1] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] tcp_listen_portaddr_hash hash table entries: 128 (order: 2, 9216 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] TCP established hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] TCP bind hash table entries: 2048 (order: 7, 294912 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] TCP: Hash tables configured (established 2048 bind 2048)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] UDP hash table entries: 256 (order: 4, 40960 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] UDP-Lite hash table entries: 256 (order: 4, 40960 bytes, linear)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] printk: console [stderr0] disabled
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] mconsole (version 2) initialized on /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/.uml/puDgcA/mconsole
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] Checking host MADV_REMOVE support...OK
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] workingset: timestamp_bits=62 max_order=15 bucket_order=0
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: compatibility layer loaded
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: ldm_memcpy, ldm_memmove, ldm_copy_page available
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: legacy apps can use these as drop-in replacements
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: lazy memory management subsystem loaded
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: lazy copy, lazy zero, lazy TLB, lazy reclaim active
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-IOMMU: no hardware IOMMU, using software-simulated isolation
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: IOMMU abstraction layer loaded (mode=SW)
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: cache optimization subsystem loaded
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: lazy invalidation, NT stores, prefetch suppression active
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: cache line size: 64 bytes
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: kernel path hooks loaded
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] LDM-OS: hooks active: copy_page, cow_page, skb_copy, splice, filemap_copy
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] io scheduler mq-deadline registered
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.140000][    T1] io scheduler kyber registered
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.150000][    T1] tun: Universal TUN/TAP device driver, 1.6
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.160000][    T1] NET: Registered PF_PACKET protocol family
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.160000][    T1] start plist test
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.160000][    T1] end plist test
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.160000][    T1] Initialized stdio console driver
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.160000][    T1] Console initialized on /dev/tty0
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.160000][    T1] printk: console [tty0] enabled
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.160000][    T1] Initializing software serial port version 1
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.180000][    T1] printk: console [mc-1] enabled
+Sep 17 18:55:40 alpine-ldm-os kern.err kernel: [    0.180000][    T1] Failed to initialize ubd device 0 :Couldn't determine size of device's file
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.210000][    T1] epollctl add err fd 0, Operation not permitted
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.210000][    T1] VFS: Mounted root (hostfs filesystem) on device 0:16.
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.210000][    T1] devtmpfs: mounted
+Sep 17 18:55:40 alpine-ldm-os kern.warn kernel: [    0.210000][    T1] This architecture does not have kernel memory protection.
+Sep 17 18:55:40 alpine-ldm-os kern.info kernel: [    0.210000][    T1] Run /etc/init.d/rc.sysinit as init process
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]   with arguments:
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     /etc/init.d/rc.sysinit
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]   with environment:
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     HOME=/
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     TERM=linux
+Sep 17 18:55:40 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     mem=128M
+Sep 17 18:56:05 alpine-ldm-os syslog.info syslogd started: BusyBox v1.36.1
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: klogd started: BusyBox v1.36.1 (2025-11-23 14:32:18 UTC)
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Linux version 6.6.142 (scnz8d37kj@sandbox-2100506394332942338) (gcc (GCC) 8.4.1 20200928 (Red Hat 8.4.1-1), GNU ld version 2.30-93.el8) #5 Fri Sep 18 02:52:39 CST 2026
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Zone ranges:
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0]   Normal   [mem 0x0000000000000000-0x0000000069d93fff]
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Movable zone start for each node
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Early memory node ranges
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0]   node   0: [mem 0x0000000000000000-0x0000000009d93fff]
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Initmem setup node 0 [mem 0x0000000000000000-0x0000000009d93fff]
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] random: crng init done
+Sep 17 18:56:05 alpine-ldm-os kern.debug kernel: [    0.000000][    T0] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+Sep 17 18:56:05 alpine-ldm-os kern.debug kernel: [    0.000000][    T0] pcpu-alloc: [0] 0 
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Kernel command line: mem=128M rootfstype=hostfs rootflags=/public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/workspace/2100615100954968066/alpine-uml-workspace/rootfs rw console=tty0 loglevel=4 init=/etc/init.d/rc.sysinit root=98:0
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Unknown kernel command line parameters "mem=128M", will be passed to user space.
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Dentry cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Inode-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.000000][    T0] Sorting __ex_table...
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Built 1 zonelists, mobility grouping on.  Total pages: 39788
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] mem auto-init: stack:off, heap alloc:off, heap free:off
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] stackdepot: allocating hash table via alloc_large_system_hash
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] stackdepot hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Memory: 113880K/161360K available (4504K kernel code, 2107K rwdata, 2076K rodata, 255K init, 5425K bss, 47480K reserved, 0K cma-reserved)
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **********************************************************
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** This system shows unhashed kernel memory addresses   **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** via the console, logs, and other interfaces. This    **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** might reduce the security of your system.            **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** If you see this message and you are not debugging    **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** the kernel, report this immediately to your system   **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ** administrator!                                       **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **                                                      **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] **********************************************************
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] ODEBUG: selftest passed
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] NR_IRQS: 64
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] Lock dependency validator: Copyright (c) 2006 Red Hat, Inc., Ingo Molnar
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_SUBCLASSES:  8
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCK_DEPTH:          48
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_KEYS:        8192
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... CLASSHASH_SIZE:          4096
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_ENTRIES:     32768
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... MAX_LOCKDEP_CHAINS:      65536
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0] ... CHAINHASH_SIZE:          32768
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0]  memory used by lock dependency info: 3765 kB
+Sep 17 18:56:05 alpine-ldm-os kern.warn kernel: [    0.000000][    T0]  per task-struct memory footprint: 1920 bytes
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] clocksource: timer: mask: 0xffffffffffffffff max_cycles: 0x1cd42e205, max_idle_ns: 881590404426 ns
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.000000][    T0] Calibrating delay loop... 4957.79 BogoMIPS (lpj=24788992)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Checking that host ptys support output SIGIO...Yes
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T0] pid_max: default: 32768 minimum: 301
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T0] LSM: initializing lsm=capability,integrity
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Mount-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T0] Mountpoint-cache hash table entries: 512 (order: 0, 4096 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.090000][    T1] devtmpfs: initialized
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.100000][    T1] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.100000][    T1] futex hash table entries: 256 (order: 3, 22528 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.100000][    T1] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.100000][    T1] audit: initializing netlink subsys (disabled)
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.100000][   T13] audit: type=2000 audit(1789671365.402:1): state=initialized audit_enabled=0 res=1
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: Low Data Movement subsystem initializing
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: Principle: 'Data stays where it is; move references, not bytes.'
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM: debugfs interface at /sys/kernel/debug/ldm_os/
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] LDM-OS: initialized successfully
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] pps_core: LinuxPPS API ver. 1 registered
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] PTP clock support registered
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] clocksource: Switched to clocksource timer
+Sep 17 18:56:05 alpine-ldm-os kern.notice kernel: [    0.110000][    T1] VFS: Disk quotas dquot_6.6.0
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.110000][    T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.130000][    T1] NET: Registered PF_INET protocol family
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.130000][    T1] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+Sep 17 18:56:05 alpine-ldm-os kern.info kernel: [    0.130000][    T1] tcp_listen_portaddr_hash hash table entries: 128 (order: 2, 9216 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] TCP established hash table entries: 2048 (order: 2, 16384 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] TCP bind hash table entries: 2048 (order: 7, 294912 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] TCP: Hash tables configured (established 2048 bind 2048)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] UDP hash table entries: 256 (order: 4, 40960 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] UDP-Lite hash table entries: 256 (order: 4, 40960 bytes, linear)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] NET: Registered PF_UNIX/PF_LOCAL protocol family
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] printk: console [stderr0] disabled
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] mconsole (version 2) initialized on /public/home/scnz8d37kj/.sag/.vibe-coding/2100506394332942338/.uml/1fmoSc/mconsole
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] Checking host MADV_REMOVE support...OK
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] workingset: timestamp_bits=62 max_order=15 bucket_order=0
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: compatibility layer loaded
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: ldm_memcpy, ldm_memmove, ldm_copy_page available
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: legacy apps can use these as drop-in replacements
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: lazy memory management subsystem loaded
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: lazy copy, lazy zero, lazy TLB, lazy reclaim active
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-IOMMU: no hardware IOMMU, using software-simulated isolation
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: IOMMU abstraction layer loaded (mode=SW)
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: cache optimization subsystem loaded
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: lazy invalidation, NT stores, prefetch suppression active
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: cache line size: 64 bytes
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: kernel path hooks loaded
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] LDM-OS: hooks active: copy_page, cow_page, skb_copy, splice, filemap_copy
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] io scheduler mq-deadline registered
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.130000][    T1] io scheduler kyber registered
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] tun: Universal TUN/TAP device driver, 1.6
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] NET: Registered PF_PACKET protocol family
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.150000][    T1] start plist test
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.150000][    T1] end plist test
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] Initialized stdio console driver
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] Console initialized on /dev/tty0
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] printk: console [tty0] enabled
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.150000][    T1] Initializing software serial port version 1
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.170000][    T1] printk: console [mc-1] enabled
+Sep 17 18:56:06 alpine-ldm-os kern.err kernel: [    0.170000][    T1] Failed to initialize ubd device 0 :Couldn't determine size of device's file
+Sep 17 18:56:06 alpine-ldm-os kern.warn kernel: [    0.200000][    T1] epollctl add err fd 0, Operation not permitted
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.210000][    T1] VFS: Mounted root (hostfs filesystem) on device 0:16.
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.210000][    T1] devtmpfs: mounted
+Sep 17 18:56:06 alpine-ldm-os kern.warn kernel: [    0.210000][    T1] This architecture does not have kernel memory protection.
+Sep 17 18:56:06 alpine-ldm-os kern.info kernel: [    0.210000][    T1] Run /etc/init.d/rc.sysinit as init process
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]   with arguments:
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     /etc/init.d/rc.sysinit
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]   with environment:
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     HOME=/
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     TERM=linux
+Sep 17 18:56:06 alpine-ldm-os kern.debug kernel: [    0.210000][    T1]     mem=128M

@@ -1,0 +1,27 @@
+  CALL    scripts/checksyscalls.sh
+  CC      mm/ldm_net.o
+mm/ldm_net.c: In function ‘ldm_skb_copy_bits’:
+mm/ldm_net.c:92:6: warning: unused variable ‘copied’ [-Wunused-variable]
+  int copied = 0;
+      ^~~~~~
+  AR      mm/built-in.a
+  AR      built-in.a
+  AR      vmlinux.a
+  LD      vmlinux.o
+  OBJCOPY modules.builtin.modinfo
+  GEN     modules.builtin
+  MODPOST Module.symvers
+  CC      .vmlinux.export.o
+  UPD     include/generated/utsversion.h
+  CC      init/version-timestamp.o
+  LD      .tmp_vmlinux.kallsyms1
+  NM      .tmp_vmlinux.kallsyms1.syms
+  KSYMS   .tmp_vmlinux.kallsyms1.S
+  AS      .tmp_vmlinux.kallsyms1.o
+  LD      .tmp_vmlinux.kallsyms2
+  NM      .tmp_vmlinux.kallsyms2.syms
+  KSYMS   .tmp_vmlinux.kallsyms2.S
+  AS      .tmp_vmlinux.kallsyms2.o
+  LD      vmlinux
+  NM      System.map
+  LINK linux

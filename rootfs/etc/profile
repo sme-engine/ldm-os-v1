@@ -1,0 +1,19 @@
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PS1='[\u@alpine-uml \W]\$ '
+export HISTSIZE=1000
+export HISTFILE=/root/.ash_history
+export EDITOR=vi
+export PAGER=less
+
+# Debug aliases
+alias dmesg='dmesg -T 2>/dev/null || dmesg'
+alias ksyms='cat /proc/kallsyms | head -50'
+alias kmods='cat /proc/modules'
+alias kmem='cat /proc/meminfo | head -20'
+alias kcpu='cat /proc/cpuinfo | head -20'
+alias klocks='cat /proc/lock_stat 2>/dev/null | head -20'
+alias kftrace='cat /sys/kernel/tracing/available_filter_functions 2>/dev/null | head -20'
+alias kslab='cat /proc/slabinfo 2>/dev/null | head -20'
+
+echo "Alpine UML Debug Shell"
+echo "Type 'help' for busybox commands, or use debug aliases above."

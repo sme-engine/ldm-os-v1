@@ -1,0 +1,9 @@
+# <device>    <mount>     <type>  <options>           <dump> <pass>
+proc          /proc       proc    defaults,noexec,nosuid,nodev  0 0
+sysfs         /sys        sysfs   defaults,noexec,nosuid,nodev  0 0
+devtmpfs      /dev        devtmpfs defaults,nosuid              0 0
+tmpfs         /tmp        tmpfs   defaults,nosuid,nodev         0 0
+tmpfs         /run        tmpfs   defaults,nosuid,nodev,mode=755 0 0
+debugfs       /sys/kernel/debug debugfs defaults,noexec,nosuid,nodev 0 0
+tracefs       /sys/kernel/tracing tracefs defaults,noexec,nosuid,nodev 0 0
+securityfs    /sys/kernel/security securityfs defaults,noexec,nosuid,nodev 0 0

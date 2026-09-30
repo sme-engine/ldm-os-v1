@@ -1,0 +1,17 @@
+test,elapsed_ms,throughput_mbps,ops,bytes
+infer_transformer_attention,24.045,3270.7,50,78643200
+infer_embedding_posenc,6.751,3883.1,25600,26214400
+infer_batched_matvec_decode,34.976,764.1,400,26726400
+infer_kv_cache_mgmt,7.943,9901.4,12800,78643200
+infer_softmax_topk_sample,53.018,482.9,200,25600000
+ft_forward_linear_relu,41.434,2609.8,50,108134400
+ft_backward_gradient,6.143,2267.2,50,13926400
+ft_adamw_optimizer_step,171.548,4889.9,50,838860800
+ft_lora_adapter_forward,0.798,3079.3,50,2457600
+ft_gradient_checkpoint,0.544,9032.0,50,4915200
+train_dataloader_pipeline,0.214,30649.8,1600,6553600
+train_ring_allreduce,0.055,3063772.1,20,167772160
+train_mixed_precision_fp16,71.993,8739.0,50,629145600
+train_activation_save_restore,0.266,18457.9,50,4915200
+train_checkpoint_save_load,35.380,47419.8,50,1677721600
+train_lr_schedule_loss,76.894,1331.7,50,102400000

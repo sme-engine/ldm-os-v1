@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# LDM-OS Makefile — supports built-in, module, and hybrid modes
+
+# Core is always built-in when LDM_OS is enabled
+obj-$(CONFIG_LDM_OS_CORE)		+= ldm_core.o
+
+# Sub-modules: each can be built-in (y), module (m), or disabled (n)
+obj-$(CONFIG_LDM_OS_COMPAT)		+= ldm_compat.o
+obj-$(CONFIG_LDM_OS_LAZY)		+= ldm_lazy.o
+obj-$(CONFIG_LDM_OS_IOMMU)		+= ldm_iommu.o
+obj-$(CONFIG_LDM_OS_CACHE)		+= ldm_cache.o
+obj-$(CONFIG_LDM_OS_HOOKS)		+= ldm_hooks.o
+obj-$(CONFIG_LDM_OS_DEEP_HOOKS)		+= ldm_deep_hooks.o
+obj-$(CONFIG_LDM_OS_NET)		+= ldm_net.o
+obj-$(CONFIG_LDM_OS_VFS)		+= ldm_vfs.o
+obj-$(CONFIG_LDM_OS_SCHED)		+= ldm_sched_block.o
+obj-$(CONFIG_LDM_OS_MM_ADVANCED)	+= ldm_mm_advanced.o
+obj-$(CONFIG_LDM_OS_VM)			+= ldm_vm_final.o

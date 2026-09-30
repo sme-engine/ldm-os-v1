@@ -1,0 +1,135 @@
+# SPDX-License-Identifier: GPL-2.0-only
+
+menuconfig LDM_OS
+	bool "Low Data Movement Operating System (LDM-OS)"
+	default y
+	help
+	  Enable the Low Data Movement (LDM) subsystem that minimizes
+	  memory copies through zero-copy transfers, lazy COW, DMA/RDMA
+	  offload, IOMMU address isolation, and in-place computation.
+
+	  LDM intercepts memory transfer operations at kernel hook points
+	  and replaces CPU-bound copies with hardware-accelerated or
+	  reference-based alternatives wherever possible.
+
+	  Runtime control via /proc/sys/vm/ldm_* sysctl parameters.
+
+	  If unsure, say Y.
+
+if LDM_OS
+
+config LDM_OS_CORE
+	def_bool y
+	help
+	  Core LDM framework (always built-in when LDM_OS is enabled).
+	  Provides anchor/morph/share API, sysctl interface, and debugfs.
+
+config LDM_OS_COMPAT
+	tristate "LDM compatibility wrappers for legacy applications"
+	default m
+	help
+	  Drop-in replacements for memcpy, copy_page, copy_to_user etc.
+	  that transparently route through LDM engines. Old applications
+	  work unchanged; new applications get maximum benefit.
+
+	  Say M to build as loadable module (ldm_compat).
+
+config LDM_OS_LAZY
+	tristate "LDM lazy memory management (lazy zero, lazy COW)"
+	default m
+	help
+	  Lazy page zeroing on first access instead of eager memset.
+	  Lazy COW defers physical page copy until actual write.
+
+	  Say M to build as loadable module (ldm_lazy).
+
+config LDM_OS_IOMMU
+	tristate "LDM IOMMU abstraction layer"
+	default m
+	help
+	  Hardware IOMMU identity mapping for zero-bounce-buffer DMA.
+	  Falls back to software-simulated isolation when no HW IOMMU.
+
+	  Say M to build as loadable module (ldm_iommu).
+
+config LDM_OS_CACHE
+	tristate "LDM cache optimization (NT stores, prefetch suppression)"
+	default m
+	help
+	  Non-temporal stores for streaming data, lazy cache invalidation,
+	  and prefetch suppression to reduce cache pollution.
+
+	  Say M to build as loadable module (ldm_cache).
+
+config LDM_OS_HOOKS
+	tristate "LDM kernel path hooks (first-pass interception)"
+	default m
+	help
+	  Intercepts copy_page, COW, skb_copy, splice, filemap_copy
+	  at kernel hot paths for LDM optimization.
+
+	  Say M to build as loadable module (ldm_hooks).
+
+config LDM_OS_DEEP_HOOKS
+	tristate "LDM deep optimization hooks (second-pass)"
+	default m
+	help
+	  Second-pass hooks for highpage_cow, lazy_zero, skb_expand,
+	  splice, process_vm, dup_mmap optimization.
+
+	  Say M to build as loadable module (ldm_deep_hooks).
+
+config LDM_OS_NET
+	tristate "LDM network stack optimization"
+	default m
+	help
+	  TCP/IP and driver stack optimization: skb_copy_bits,
+	  tcp_send/recv, tun, GRO zero-copy paths.
+
+	  Say M to build as loadable module (ldm_net).
+
+config LDM_OS_VFS
+	tristate "LDM VFS and I/O optimization"
+	default m
+	help
+	  VFS read/write, iov_iter, io_uring, DMA mapping,
+	  scatter-gather copy, sendfile zero-copy optimization.
+
+	  Say M to build as loadable module (ldm_vfs).
+
+config LDM_OS_SCHED
+	tristate "LDM scheduler and block device optimization"
+	default m
+	help
+	  Context switch, bio, hugetlb COW, memset/memcpy NT,
+	  futex optimization.
+
+	  Say M to build as loadable module (ldm_sched_block).
+
+config LDM_OS_MM_ADVANCED
+	tristate "LDM advanced MM features (migration, shmem, swap)"
+	default m
+	help
+	  Page migration, shared memory, unix socket, userfaultfd,
+	  and swap optimization.
+
+	  Say M to build as loadable module (ldm_mm_advanced).
+
+config LDM_OS_VM
+	tristate "LDM VM subsystem optimization (zswap, THP, reclaim)"
+	default m
+	help
+	  Zswap, zram, THP collapse, page reclaim, readahead,
+	  and mlock optimization.
+
+	  Say M to build as loadable module (ldm_vm_final).
+
+config LDM_OS_DEBUG
+	bool "LDM debug statistics and tracing"
+	depends on DEBUG_FS
+	default y
+	help
+	  Enable debugfs interface at /sys/kernel/debug/ldm_os/stats
+	  for monitoring LDM effectiveness and tuning parameters.
+
+endif # LDM_OS
