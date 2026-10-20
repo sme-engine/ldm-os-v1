@@ -5,6 +5,10 @@
 
 LDM-OS-v1 is an exploratory low-memory relocatable operating system (LDM-OS) built on Alpine Linux:
 
+
+## basic benchmark
+- benchmark.sh
+
 ## Test Environment
 
 | Component | Version | Description |

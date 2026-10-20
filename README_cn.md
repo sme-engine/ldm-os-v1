@@ -5,6 +5,9 @@
 
 LDM-OS-v1，基于Alpine Linux制作的低内存搬运操作系统（LDM-OS）的探索版：
 
+## 初步benchmark
+- benchmark.sh
+
 ## Test ENV.  / 测试环境
  
 | 组件 | 版本 | 说明 |
