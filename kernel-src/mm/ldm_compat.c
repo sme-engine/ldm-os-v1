@@ -30,54 +30,6 @@
 /* LDM-Aware Memory Copy Primitives                                         */
 /* ========================================================================= */
 
-/**
- * ldm_memcpy - LDM-aware memcpy that avoids unnecessary data movement
- *
- * Analyzes source and destination to determine the optimal strategy:
- *   1. Same page → direct memcpy (unavoidable, but cache-hot)
- *   2. Different pages, read-only src → lazy COW (zero-copy)
- *   3. DMA-capable hardware → delegate to DMA engine
- *   4. Fallback → standard memcpy with non-temporal hints
- *
- * This function is designed to be a drop-in replacement for memcpy
- * in performance-critical kernel paths.
- */
-void *ldm_memcpy(void *dst, const void *src, size_t len)
-{
-	unsigned long src_addr = (unsigned long)src;
-	unsigned long dst_addr = (unsigned long)dst;
-
-	if (len == 0)
-		return dst;
-
-	/*
-	 * Fast path: small copies (< cache line) are faster with
-	 * direct memcpy than any LDM overhead.
-	 */
-	if (len <= 64) {
-		memcpy(dst, src, len);
-		return dst;
-	}
-
-	/*
-	 * Same-page check: if src and dst are on the same physical page,
-	 * a regular memcpy is optimal (data is already cache-hot).
-	 */
-	if ((src_addr >> PAGE_SHIFT) == (dst_addr >> PAGE_SHIFT)) {
-		memcpy(dst, src, len);
-		return dst;
-	}
-
-	/*
-	 * Cross-page transfer: use LDM zero-copy engine.
-	 * The engine will try DMA/RDMA/IOMMU first, then fall back
-	 * to optimized software copy.
-	 */
-	ldm_zerocopy_transfer(dst, src, len, LDM_XFER_ZEROCOPY | LDM_XFER_SW_FALLBACK);
-
-	return dst;
-}
-EXPORT_SYMBOL_GPL(ldm_memcpy);
 
 /**
  * ldm_memmove - LDM-aware memmove with overlap detection
@@ -151,20 +103,6 @@ unsigned long ldm_copy_to_user(void __user *to, const void *from, unsigned long 
 }
 EXPORT_SYMBOL_GPL(ldm_copy_to_user);
 
-/**
- * ldm_copy_from_user - LDM-aware copy_from_user
- */
-unsigned long ldm_copy_from_user(void *to, const void __user *from, unsigned long n)
-{
-	if (n <= 64) {
-		return copy_from_user(to, from, n);
-	}
-
-	ldm_zerocopy_transfer(to, (const void __force *)from, n,
-			       LDM_XFER_ZEROCOPY | LDM_XFER_SW_FALLBACK);
-	return 0;
-}
-EXPORT_SYMBOL_GPL(ldm_copy_from_user);
 
 /* ========================================================================= */
 /* Socket / Network Zero-Copy                                               */
